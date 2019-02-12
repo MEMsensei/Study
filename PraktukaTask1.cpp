@@ -22,12 +22,32 @@ int main()
 	cin>> A;
 	cout<<"Введiть B: ";
 	cin>> B; 
+	
 	srand(time(0));
-		
+	
+	cout<<"Початковий масив з межами A та В"<<endl;
+	
+	int A[50];
+	
 	for(int i = 0; i<j; i++){
-		int n = min + rand() % (max - min);
-		arr [i] = n;
+		arr [i] = A + rand() % (A - B);
 		cout<<arr[i]<<" ";
 	}
+	
+	cout<<"\n\n"<<"Масив після....... непарних"<<endl;
+	 
+	cout<<endl;
+	int k = 0;
+	for (int i = 0; i < 50; i++){
+		if ((A[i] % 2) == 0){
+			cout<< A[i] << "   ";
+			k = k++;
+		}
+	}
+	cout<<endl<<endl;
+	
+	int n = 50 - k ;
+	cout<<"Кількість вилучених чисел з масиву  = "<< n << endl;
+	
 	return 0;
 }
